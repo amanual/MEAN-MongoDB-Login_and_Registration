@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h2>Registration</h2>
+    <form action="/create" method="post">
+        <div>
+            
+            <% if (err !== undefined) { %>
+                <% for (var i in err) { %>
+                    <p><%= err[i].message %></p>
+                <% } %>
+            <% } %>
+        </div>
+        <table>
+            <tr>
+                <td>First Name: </td>
+                <td>
+                    <input type="text" name="first_name">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td>
+                    <input type="text" name="last_name">
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="text" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td>
+                    <input type="text" name="password_conf">
+                </td>                
+            </tr>
+            <tr>
+                <td>Birth Date: </td>
+                <td>
+                    <input type="date" name="birthdate">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="register" value="Register" class="reg">
+    </form>
+</div>
+<div>
+    <h2>Login</h2>
+    <form action="/login" method="post">        
+        <table>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    <input type="text" name="password">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="login" value="Login" class="log">
+    </form>
+</div>
+    
+</body>
+</html>
